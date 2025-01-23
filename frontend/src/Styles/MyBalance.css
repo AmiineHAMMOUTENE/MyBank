@@ -1,0 +1,24 @@
+/* Carte bleue stylée pour le solde actuel */
+.balance-card {
+    background-color: #007bff; /* Bleu */
+    color: white; /* Texte en blanc */
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Limiter la largeur */
+    margin: 20px auto; /* Centrer la carte */
+  }
+  
+  .balance-card h3 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+  
+  .balance-card p {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  

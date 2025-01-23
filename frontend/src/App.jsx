@@ -1,13 +1,12 @@
-// src/App.jsx
 import React from "react";
-import Navbar from "./components/Navbar.jsx";
+import MainLayout from "./layouts/MainLayout.jsx"; // Import du MainLayout
+import OperationsPage from "./pages/OperationsPage.jsx"; // Import du composant OperationsPage
 
 const App = () => {
   return (
-    <div>
-      {/* Utilisation de la Navbar */}
-      <Navbar />
-    </div>
+    <MainLayout>
+      <OperationsPage /> {/* Utilisation du composant OperationsPage */}
+    </MainLayout>
   );
 };
 

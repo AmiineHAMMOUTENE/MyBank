@@ -9,8 +9,6 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
 
-#[ORM\Entity(repositoryClass: CategoryRepository::class)]
-#[ApiResource]
 class Category
 {
     #[ORM\Id]
@@ -57,27 +55,5 @@ class Category
     public function getOperations(): Collection
     {
         return $this->operations;
-    }
-
-    public function addOperation(Operation $operation): static
-    {
-        if (!$this->operations->contains($operation)) {
-            $this->operations->add($operation);
-            $operation->setCategory($this);
-        }
-
-        return $this;
-    }
-
-    public function removeOperation(Operation $operation): static
-    {
-        if ($this->operations->removeElement($operation)) {
-            // set the owning side to null (unless already changed)
-            if ($operation->getCategory() === $this) {
-                $operation->setCategory(null);
-            }
-        }
-
-        return $this;
     }
 }
